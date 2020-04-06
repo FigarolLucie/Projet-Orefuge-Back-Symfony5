@@ -1,0 +1,349 @@
+<?xml version="1.0" standalone="no"?>
+<!DOCTYPE svg PUBLIC "-//W3C//DTD SVG 1.1//EN"
+"http://www.w3.org/Graphics/SVG/1.1/DTD/svg11.dtd">
+
+<svg width="843" height="952" view_box="0 0 843 952"
+xmlns="http://www.w3.org/2000/svg"
+xmlns:link="http://www.w3.org/1999/xlink">\n\n<desc>Généré par Mocodo 2.3.7 le Thu, 05 Mar 2020 07:22:37</desc>
+
+<rect id="frame" x="0" y="0" width="843" height="952" fill="none" stroke="none" stroke-width="0"/>
+
+<!-- Association publishes -->
+<line x1="493" y1="853" x2="340" y2="853" stroke="#726f83" stroke-width="1.5"/>
+<text x="417" y="870.0" fill="#726f83" font-family="Arial" font-size="12">1,1</text>
+<line x1="340" y1="494" x2="340" y2="853" stroke="#726f83" stroke-width="1.5"/>
+<text x="346.0" y="754" fill="#726f83" font-family="Arial" font-size="12">1,N</text>
+<g id="association-publishes">
+	<path d="M 370 825 a 14 14 90 0 1 14 14 V 852 h -88 V 839 a 14 14 90 0 1 14 -14" fill="#b2bba4" stroke="#b2bba4" stroke-width="0"/>
+	<path d="M 384 852.0 v 15 a 14 14 90 0 1 -14 14 H 310 a 14 14 90 0 1 -14 -14 V 852.0 H 88" fill="#ccd6ba" stroke="#ccd6ba" stroke-width="0"/>
+	<rect x="296" y="825" width="88" height="56" fill="none" rx="14" stroke="#85956b" stroke-width="3"/>
+	<line x1="296" y1="852" x2="384" y2="852" stroke="#85956b" stroke-width="1.5"/>
+	<text x="305" y="845.3" fill="#27360c" font-family="Arial Black" font-size="13">publishes</text>
+</g>
+
+<!-- Association belongs to -->
+<line x1="493" y1="171" x2="493" y2="63" stroke="#726f83" stroke-width="1.5"/>
+<text x="499.0" y="108" fill="#726f83" font-family="Arial" font-size="12">1,1</text>
+<line x1="340" y1="63" x2="493" y2="63" stroke="#726f83" stroke-width="1.5"/>
+<text x="391" y="80.0" fill="#726f83" font-family="Arial" font-size="12">0,N</text>
+<g id="association-belongs to">
+	<path d="M 526 35 a 14 14 90 0 1 14 14 V 62 h -94 V 49 a 14 14 90 0 1 14 -14" fill="#b2bba4" stroke="#b2bba4" stroke-width="0"/>
+	<path d="M 540 62.0 v 15 a 14 14 90 0 1 -14 14 H 460 a 14 14 90 0 1 -14 -14 V 62.0 H 94" fill="#ccd6ba" stroke="#ccd6ba" stroke-width="0"/>
+	<rect x="446" y="35" width="94" height="56" fill="none" rx="14" stroke="#85956b" stroke-width="3"/>
+	<line x1="446" y1="62" x2="540" y2="62" stroke="#85956b" stroke-width="1.5"/>
+	<text x="455" y="55.3" fill="#27360c" font-family="Arial Black" font-size="13">belongs to</text>
+</g>
+
+<!-- Association is -->
+<line x1="653" y1="494" x2="653" y2="171" stroke="#726f83" stroke-width="1.5"/>
+<text x="659.0" y="314" fill="#726f83" font-family="Arial" font-size="12">1,1</text>
+<line x1="493" y1="171" x2="653" y2="171" stroke="#726f83" stroke-width="1.5"/>
+<text x="544" y="188.0" fill="#726f83" font-family="Arial" font-size="12">0,N</text>
+<g id="association-is">
+	<path d="M 655 143 a 14 14 90 0 1 14 14 V 170 h -32 V 157 a 14 14 90 0 1 14 -14" fill="#b2bba4" stroke="#b2bba4" stroke-width="0"/>
+	<path d="M 669 170.0 v 15 a 14 14 90 0 1 -14 14 H 651 a 14 14 90 0 1 -14 -14 V 170.0 H 32" fill="#ccd6ba" stroke="#ccd6ba" stroke-width="0"/>
+	<rect x="637" y="143" width="32" height="56" fill="none" rx="14" stroke="#85956b" stroke-width="3"/>
+	<line x1="637" y1="170" x2="669" y2="170" stroke="#85956b" stroke-width="1.5"/>
+	<text x="646" y="163.3" fill="#27360c" font-family="Arial Black" font-size="13">is</text>
+</g>
+
+<!-- Association is located -->
+<line x1="188" y1="853" x2="188" y2="494" stroke="#726f83" stroke-width="1.5"/>
+<text x="194.0" y="817" fill="#726f83" font-family="Arial" font-size="12">0,N</text>
+<line x1="340" y1="494" x2="188" y2="494" stroke="#726f83" stroke-width="1.5"/>
+<text x="242" y="511.0" fill="#726f83" font-family="Arial" font-size="12">1,1</text>
+<g id="association-is located">
+	<path d="M 219 466 a 14 14 90 0 1 14 14 V 493 h -90 V 480 a 14 14 90 0 1 14 -14" fill="#b2bba4" stroke="#b2bba4" stroke-width="0"/>
+	<path d="M 233 493.0 v 15 a 14 14 90 0 1 -14 14 H 157 a 14 14 90 0 1 -14 -14 V 493.0 H 90" fill="#ccd6ba" stroke="#ccd6ba" stroke-width="0"/>
+	<rect x="143" y="466" width="90" height="56" fill="none" rx="14" stroke="#85956b" stroke-width="3"/>
+	<line x1="143" y1="493" x2="233" y2="493" stroke="#85956b" stroke-width="1.5"/>
+	<text x="152" y="486.3" fill="#27360c" font-family="Arial Black" font-size="13">is located</text>
+</g>
+
+<!-- Association has4 -->
+<line x1="493" y1="853" x2="653" y2="853" stroke="#726f83" stroke-width="1.5"/>
+<text x="551" y="870.0" fill="#726f83" font-family="Arial" font-size="12">1,1</text>
+<line x1="789" y1="853" x2="653" y2="853" stroke="#726f83" stroke-width="1.5"/>
+<text x="717" y="870.0" fill="#726f83" font-family="Arial" font-size="12">0,N</text>
+<g id="association-has4">
+	<path d="M 661 825 a 14 14 90 0 1 14 14 V 852 h -44 V 839 a 14 14 90 0 1 14 -14" fill="#b2bba4" stroke="#b2bba4" stroke-width="0"/>
+	<path d="M 675 852.0 v 15 a 14 14 90 0 1 -14 14 H 645 a 14 14 90 0 1 -14 -14 V 852.0 H 44" fill="#ccd6ba" stroke="#ccd6ba" stroke-width="0"/>
+	<rect x="631" y="825" width="44" height="56" fill="none" rx="14" stroke="#85956b" stroke-width="3"/>
+	<line x1="631" y1="852" x2="675" y2="852" stroke="#85956b" stroke-width="1.5"/>
+	<text x="640" y="845.3" fill="#27360c" font-family="Arial Black" font-size="13">has</text>
+</g>
+
+<!-- Association is part of -->
+<line x1="188" y1="853" x2="54" y2="853" stroke="#726f83" stroke-width="1.5"/>
+<text x="105" y="870.0" fill="#726f83" font-family="Arial" font-size="12">1,1</text>
+<line x1="54" y1="494" x2="54" y2="853" stroke="#726f83" stroke-width="1.5"/>
+<text x="60.0" y="538" fill="#726f83" font-family="Arial" font-size="12">1,N</text>
+<g id="association-is part of">
+	<path d="M 82 825 a 14 14 90 0 1 14 14 V 852 h -84 V 839 a 14 14 90 0 1 14 -14" fill="#b2bba4" stroke="#b2bba4" stroke-width="0"/>
+	<path d="M 96 852.0 v 15 a 14 14 90 0 1 -14 14 H 26 a 14 14 90 0 1 -14 -14 V 852.0 H 84" fill="#ccd6ba" stroke="#ccd6ba" stroke-width="0"/>
+	<rect x="12" y="825" width="84" height="56" fill="none" rx="14" stroke="#85956b" stroke-width="3"/>
+	<line x1="12" y1="852" x2="96" y2="852" stroke="#85956b" stroke-width="1.5"/>
+	<text x="21" y="845.3" fill="#27360c" font-family="Arial Black" font-size="13">is part of</text>
+</g>
+
+<!-- Association has6 -->
+<line x1="340" y1="63" x2="340" y2="171" stroke="#726f83" stroke-width="1.5"/>
+<text x="346.0" y="134" fill="#726f83" font-family="Arial" font-size="12">1,N</text>
+<line x1="188" y1="171" x2="340" y2="171" stroke="#726f83" stroke-width="1.5"/>
+<text x="243" y="188.0" fill="#726f83" font-family="Arial" font-size="12">0,N</text>
+<g id="association-has6">
+	<path d="M 348 143 a 14 14 90 0 1 14 14 V 170 h -44 V 157 a 14 14 90 0 1 14 -14" fill="#b2bba4" stroke="#b2bba4" stroke-width="0"/>
+	<path d="M 362 170.0 v 15 a 14 14 90 0 1 -14 14 H 332 a 14 14 90 0 1 -14 -14 V 170.0 H 44" fill="#ccd6ba" stroke="#ccd6ba" stroke-width="0"/>
+	<rect x="318" y="143" width="44" height="56" fill="none" rx="14" stroke="#85956b" stroke-width="3"/>
+	<line x1="318" y1="170" x2="362" y2="170" stroke="#85956b" stroke-width="1.5"/>
+	<text x="327" y="163.3" fill="#27360c" font-family="Arial Black" font-size="13">has</text>
+</g>
+
+<!-- Association has3 -->
+<line x1="340" y1="63" x2="188" y2="63" stroke="#726f83" stroke-width="1.5"/>
+<text x="271" y="80.0" fill="#726f83" font-family="Arial" font-size="12">1,1</text>
+<line x1="54" y1="63" x2="188" y2="63" stroke="#726f83" stroke-width="1.5"/>
+<text x="105" y="80.0" fill="#726f83" font-family="Arial" font-size="12">0,N</text>
+<g id="association-has3">
+	<path d="M 196 35 a 14 14 90 0 1 14 14 V 62 h -44 V 49 a 14 14 90 0 1 14 -14" fill="#b2bba4" stroke="#b2bba4" stroke-width="0"/>
+	<path d="M 210 62.0 v 15 a 14 14 90 0 1 -14 14 H 180 a 14 14 90 0 1 -14 -14 V 62.0 H 44" fill="#ccd6ba" stroke="#ccd6ba" stroke-width="0"/>
+	<rect x="166" y="35" width="44" height="56" fill="none" rx="14" stroke="#85956b" stroke-width="3"/>
+	<line x1="166" y1="62" x2="210" y2="62" stroke="#85956b" stroke-width="1.5"/>
+	<text x="175" y="55.3" fill="#27360c" font-family="Arial Black" font-size="13">has</text>
+</g>
+
+<!-- Association has2 -->
+<line x1="653" y1="494" x2="789" y2="494" stroke="#726f83" stroke-width="1.5"/>
+<text x="740" y="511.0" fill="#726f83" font-family="Arial" font-size="12">1,N</text>
+<line x1="789" y1="171" x2="789" y2="494" stroke="#726f83" stroke-width="1.5"/>
+<text x="795.0" y="242" fill="#726f83" font-family="Arial" font-size="12">0,N</text>
+<g id="association-has2">
+	<path d="M 797 466 a 14 14 90 0 1 14 14 V 493 h -44 V 480 a 14 14 90 0 1 14 -14" fill="#b2bba4" stroke="#b2bba4" stroke-width="0"/>
+	<path d="M 811 493.0 v 15 a 14 14 90 0 1 -14 14 H 781 a 14 14 90 0 1 -14 -14 V 493.0 H 44" fill="#ccd6ba" stroke="#ccd6ba" stroke-width="0"/>
+	<rect x="767" y="466" width="44" height="56" fill="none" rx="14" stroke="#85956b" stroke-width="3"/>
+	<line x1="767" y1="493" x2="811" y2="493" stroke="#85956b" stroke-width="1.5"/>
+	<text x="776" y="486.3" fill="#27360c" font-family="Arial Black" font-size="13">has</text>
+</g>
+
+<!-- Association welcomes -->
+<line x1="653" y1="494" x2="493" y2="494" stroke="#726f83" stroke-width="1.5"/>
+<text x="548" y="511.0" fill="#726f83" font-family="Arial" font-size="12">1,1</text>
+<line x1="340" y1="494" x2="493" y2="494" stroke="#726f83" stroke-width="1.5"/>
+<text x="420" y="511.0" fill="#726f83" font-family="Arial" font-size="12">0,N</text>
+<g id="association-welcomes">
+	<path d="M 525 466 a 14 14 90 0 1 14 14 V 493 h -92 V 480 a 14 14 90 0 1 14 -14" fill="#b2bba4" stroke="#b2bba4" stroke-width="0"/>
+	<path d="M 539 493.0 v 15 a 14 14 90 0 1 -14 14 H 461 a 14 14 90 0 1 -14 -14 V 493.0 H 92" fill="#ccd6ba" stroke="#ccd6ba" stroke-width="0"/>
+	<rect x="447" y="466" width="92" height="56" fill="none" rx="14" stroke="#85956b" stroke-width="3"/>
+	<line x1="447" y1="493" x2="539" y2="493" stroke="#85956b" stroke-width="1.5"/>
+	<text x="456" y="486.3" fill="#27360c" font-family="Arial Black" font-size="13">welcomes</text>
+</g>
+
+<!-- Entity CATEGORY -->
+<g id="entity-CATEGORY">
+	<g id="frame-CATEGORY">
+		<rect x="139" y="117" width="98" height="28" fill="#97b8ff" stroke="#97b8ff" stroke-width="0"/>
+		<rect x="139" y="145.0" width="98" height="80" fill="#c0d4ff" stroke="#c0d4ff" stroke-width="0"/>
+		<rect x="139" y="117" width="98" height="108" fill="none" stroke="#578dff" stroke-width="3"/>
+		<line x1="139" y1="145" x2="237" y2="145" stroke="#578dff" stroke-width="1.5"/>
+	</g>
+	<text x="147" y="137.3" fill="#131114" font-family="Arial Black" font-size="13">CATEGORY</text>
+	<text x="147" y="161.2" fill="#3e3c42" font-family="Arial" font-size="14">name</text>
+	<line x1="147" y1="164" x2="185" y2="164" stroke="#3e3c42" stroke-width="1.2"/>
+	<text x="147" y="179.2" fill="#3e3c42" font-family="Arial" font-size="14">created_at</text>
+	<text x="147" y="197.2" fill="#3e3c42" font-family="Arial" font-size="14">updated_at</text>
+	<text x="147" y="215.2" fill="#3e3c42" font-family="Arial" font-size="14">status</text>
+</g>
+
+<!-- Entity SHELTER -->
+<g id="entity-SHELTER">
+	<g id="frame-SHELTER">
+		<rect x="266" y="251" width="148" height="28" fill="#97b8ff" stroke="#97b8ff" stroke-width="0"/>
+		<rect x="266" y="279.0" width="148" height="458" fill="#c0d4ff" stroke="#c0d4ff" stroke-width="0"/>
+		<rect x="266" y="251" width="148" height="486" fill="none" stroke="#578dff" stroke-width="3"/>
+		<line x1="266" y1="279" x2="414" y2="279" stroke="#578dff" stroke-width="1.5"/>
+	</g>
+	<text x="306" y="271.3" fill="#131114" font-family="Arial Black" font-size="13">SHELTER</text>
+	<text x="274" y="295.2" fill="#3e3c42" font-family="Arial" font-size="14">name</text>
+	<line x1="274" y1="298" x2="312" y2="298" stroke="#3e3c42" stroke-width="1.2"/>
+	<text x="274" y="313.2" fill="#3e3c42" font-family="Arial" font-size="14">description</text>
+	<text x="274" y="331.2" fill="#3e3c42" font-family="Arial" font-size="14">phone_number</text>
+	<text x="274" y="349.2" fill="#3e3c42" font-family="Arial" font-size="14">mobile_phone</text>
+	<text x="274" y="367.2" fill="#3e3c42" font-family="Arial" font-size="14">street_name</text>
+	<text x="274" y="385.2" fill="#3e3c42" font-family="Arial" font-size="14">street_number</text>
+	<text x="274" y="403.2" fill="#3e3c42" font-family="Arial" font-size="14">zipcode</text>
+	<text x="274" y="421.2" fill="#3e3c42" font-family="Arial" font-size="14">city</text>
+	<text x="274" y="439.2" fill="#3e3c42" font-family="Arial" font-size="14">country</text>
+	<text x="274" y="457.2" fill="#3e3c42" font-family="Arial" font-size="14">email</text>
+	<text x="274" y="475.2" fill="#3e3c42" font-family="Arial" font-size="14">firstname</text>
+	<text x="274" y="493.2" fill="#3e3c42" font-family="Arial" font-size="14">lastname</text>
+	<text x="274" y="511.2" fill="#3e3c42" font-family="Arial" font-size="14">link_FB</text>
+	<text x="274" y="529.2" fill="#3e3c42" font-family="Arial" font-size="14">link_instagram</text>
+	<text x="274" y="547.2" fill="#3e3c42" font-family="Arial" font-size="14">link_cagnotte</text>
+	<text x="274" y="565.2" fill="#3e3c42" font-family="Arial" font-size="14">link_website</text>
+	<text x="274" y="583.2" fill="#3e3c42" font-family="Arial" font-size="14">hours</text>
+	<text x="274" y="601.2" fill="#3e3c42" font-family="Arial" font-size="14">picture1</text>
+	<text x="274" y="619.2" fill="#3e3c42" font-family="Arial" font-size="14">picture2</text>
+	<text x="274" y="637.2" fill="#3e3c42" font-family="Arial" font-size="14">picture3</text>
+	<text x="274" y="655.2" fill="#3e3c42" font-family="Arial" font-size="14">picture4</text>
+	<text x="274" y="673.2" fill="#3e3c42" font-family="Arial" font-size="14">adoption_conditions</text>
+	<text x="274" y="691.2" fill="#3e3c42" font-family="Arial" font-size="14">created_at</text>
+	<text x="274" y="709.2" fill="#3e3c42" font-family="Arial" font-size="14">updated_at</text>
+	<text x="274" y="727.2" fill="#3e3c42" font-family="Arial" font-size="14">status</text>
+</g>
+
+<!-- Entity REGION -->
+<g id="entity-REGION">
+	<g id="frame-REGION">
+		<rect x="17" y="467" width="74" height="28" fill="#97b8ff" stroke="#97b8ff" stroke-width="0"/>
+		<rect x="17" y="495.0" width="74" height="26" fill="#c0d4ff" stroke="#c0d4ff" stroke-width="0"/>
+		<rect x="17" y="467" width="74" height="54" fill="none" stroke="#578dff" stroke-width="3"/>
+		<line x1="17" y1="495" x2="91" y2="495" stroke="#578dff" stroke-width="1.5"/>
+	</g>
+	<text x="25" y="487.3" fill="#131114" font-family="Arial Black" font-size="13">REGION</text>
+	<text x="25" y="511.2" fill="#3e3c42" font-family="Arial" font-size="14">name</text>
+	<line x1="25" y1="514" x2="63" y2="514" stroke="#3e3c42" stroke-width="1.2"/>
+</g>
+
+<!-- Entity APP_USER -->
+<g id="entity-APP_USER">
+	<g id="frame-APP_USER">
+		<rect x="441" y="763" width="104" height="28" fill="#97b8ff" stroke="#97b8ff" stroke-width="0"/>
+		<rect x="441" y="791.0" width="104" height="152" fill="#c0d4ff" stroke="#c0d4ff" stroke-width="0"/>
+		<rect x="441" y="763" width="104" height="180" fill="none" stroke="#578dff" stroke-width="3"/>
+		<line x1="441" y1="791" x2="545" y2="791" stroke="#578dff" stroke-width="1.5"/>
+	</g>
+	<text x="455" y="783.3" fill="#131114" font-family="Arial Black" font-size="13">APP_USER</text>
+	<text x="449" y="807.2" fill="#3e3c42" font-family="Arial" font-size="14">username</text>
+	<line x1="449" y1="810" x2="515" y2="810" stroke="#3e3c42" stroke-width="1.2"/>
+	<text x="449" y="825.2" fill="#3e3c42" font-family="Arial" font-size="14">email</text>
+	<text x="449" y="843.2" fill="#3e3c42" font-family="Arial" font-size="14">password</text>
+	<text x="449" y="861.2" fill="#3e3c42" font-family="Arial" font-size="14">terms</text>
+	<text x="449" y="879.2" fill="#3e3c42" font-family="Arial" font-size="14">siret_number</text>
+	<text x="449" y="897.2" fill="#3e3c42" font-family="Arial" font-size="14">created_at</text>
+	<text x="449" y="915.2" fill="#3e3c42" font-family="Arial" font-size="14">updated_at</text>
+	<text x="449" y="933.2" fill="#3e3c42" font-family="Arial" font-size="14">status</text>
+</g>
+
+<!-- Entity TAG -->
+<g id="entity-TAG">
+	<g id="frame-TAG">
+		<rect x="744" y="117" width="90" height="28" fill="#97b8ff" stroke="#97b8ff" stroke-width="0"/>
+		<rect x="744" y="145.0" width="90" height="80" fill="#c0d4ff" stroke="#c0d4ff" stroke-width="0"/>
+		<rect x="744" y="117" width="90" height="108" fill="none" stroke="#578dff" stroke-width="3"/>
+		<line x1="744" y1="145" x2="834" y2="145" stroke="#578dff" stroke-width="1.5"/>
+	</g>
+	<text x="773" y="137.3" fill="#131114" font-family="Arial Black" font-size="13">TAG</text>
+	<text x="752" y="161.2" fill="#3e3c42" font-family="Arial" font-size="14">name</text>
+	<line x1="752" y1="164" x2="790" y2="164" stroke="#3e3c42" stroke-width="1.2"/>
+	<text x="752" y="179.2" fill="#3e3c42" font-family="Arial" font-size="14">created_at</text>
+	<text x="752" y="197.2" fill="#3e3c42" font-family="Arial" font-size="14">updated_at</text>
+	<text x="752" y="215.2" fill="#3e3c42" font-family="Arial" font-size="14">status</text>
+</g>
+
+<!-- Entity ROLE -->
+<g id="entity-ROLE">
+	<g id="frame-ROLE">
+		<rect x="744" y="790" width="90" height="28" fill="#97b8ff" stroke="#97b8ff" stroke-width="0"/>
+		<rect x="744" y="818.0" width="90" height="98" fill="#c0d4ff" stroke="#c0d4ff" stroke-width="0"/>
+		<rect x="744" y="790" width="90" height="126" fill="none" stroke="#578dff" stroke-width="3"/>
+		<line x1="744" y1="818" x2="834" y2="818" stroke="#578dff" stroke-width="1.5"/>
+	</g>
+	<text x="769" y="810.3" fill="#131114" font-family="Arial Black" font-size="13">ROLE</text>
+	<text x="752" y="834.2" fill="#3e3c42" font-family="Arial" font-size="14">name</text>
+	<line x1="752" y1="837" x2="790" y2="837" stroke="#3e3c42" stroke-width="1.2"/>
+	<text x="752" y="852.2" fill="#3e3c42" font-family="Arial" font-size="14">role_string</text>
+	<text x="752" y="870.2" fill="#3e3c42" font-family="Arial" font-size="14">created_at</text>
+	<text x="752" y="888.2" fill="#3e3c42" font-family="Arial" font-size="14">updated_at</text>
+	<text x="752" y="906.2" fill="#3e3c42" font-family="Arial" font-size="14">status</text>
+</g>
+
+<!-- Entity ANIMAL -->
+<g id="entity-ANIMAL">
+	<g id="frame-ANIMAL">
+		<rect x="572" y="323" width="162" height="28" fill="#97b8ff" stroke="#97b8ff" stroke-width="0"/>
+		<rect x="572" y="351.0" width="162" height="314" fill="#c0d4ff" stroke="#c0d4ff" stroke-width="0"/>
+		<rect x="572" y="323" width="162" height="342" fill="none" stroke="#578dff" stroke-width="3"/>
+		<line x1="572" y1="351" x2="734" y2="351" stroke="#578dff" stroke-width="1.5"/>
+	</g>
+	<text x="624" y="343.3" fill="#131114" font-family="Arial Black" font-size="13">ANIMAL</text>
+	<text x="580" y="367.2" fill="#3e3c42" font-family="Arial" font-size="14">name</text>
+	<line x1="580" y1="370" x2="618" y2="370" stroke="#3e3c42" stroke-width="1.2"/>
+	<text x="580" y="385.2" fill="#3e3c42" font-family="Arial" font-size="14">description</text>
+	<text x="580" y="403.2" fill="#3e3c42" font-family="Arial" font-size="14">birthdate</text>
+	<text x="580" y="421.2" fill="#3e3c42" font-family="Arial" font-size="14">arrival_date</text>
+	<text x="580" y="439.2" fill="#3e3c42" font-family="Arial" font-size="14">gender</text>
+	<text x="580" y="457.2" fill="#3e3c42" font-family="Arial" font-size="14">dog_friendly</text>
+	<text x="580" y="475.2" fill="#3e3c42" font-family="Arial" font-size="14">cat_friendly</text>
+	<text x="580" y="493.2" fill="#3e3c42" font-family="Arial" font-size="14">child_friendly</text>
+	<text x="580" y="511.2" fill="#3e3c42" font-family="Arial" font-size="14">additional_information</text>
+	<text x="580" y="529.2" fill="#3e3c42" font-family="Arial" font-size="14">picture1</text>
+	<text x="580" y="547.2" fill="#3e3c42" font-family="Arial" font-size="14">picture2</text>
+	<text x="580" y="565.2" fill="#3e3c42" font-family="Arial" font-size="14">picture3</text>
+	<text x="580" y="583.2" fill="#3e3c42" font-family="Arial" font-size="14">picture4</text>
+	<text x="580" y="601.2" fill="#3e3c42" font-family="Arial" font-size="14">picture5</text>
+	<text x="580" y="619.2" fill="#3e3c42" font-family="Arial" font-size="14">created_at</text>
+	<text x="580" y="637.2" fill="#3e3c42" font-family="Arial" font-size="14">updated at</text>
+	<text x="580" y="655.2" fill="#3e3c42" font-family="Arial" font-size="14">status</text>
+</g>
+
+<!-- Entity DEPARTMENT -->
+<g id="entity-DEPARTMENT">
+	<g id="frame-DEPARTMENT">
+		<rect x="129" y="826" width="118" height="28" fill="#97b8ff" stroke="#97b8ff" stroke-width="0"/>
+		<rect x="129" y="854.0" width="118" height="26" fill="#c0d4ff" stroke="#c0d4ff" stroke-width="0"/>
+		<rect x="129" y="826" width="118" height="54" fill="none" stroke="#578dff" stroke-width="3"/>
+		<line x1="129" y1="854" x2="247" y2="854" stroke="#578dff" stroke-width="1.5"/>
+	</g>
+	<text x="137" y="846.3" fill="#131114" font-family="Arial Black" font-size="13">DEPARTMENT</text>
+	<text x="137" y="870.2" fill="#3e3c42" font-family="Arial" font-size="14">name</text>
+	<line x1="137" y1="873" x2="175" y2="873" stroke="#3e3c42" stroke-width="1.2"/>
+</g>
+
+<!-- Entity TYPE -->
+<g id="entity-TYPE">
+	<g id="frame-TYPE">
+		<rect x="295" y="9" width="90" height="28" fill="#97b8ff" stroke="#97b8ff" stroke-width="0"/>
+		<rect x="295" y="37.0" width="90" height="80" fill="#c0d4ff" stroke="#c0d4ff" stroke-width="0"/>
+		<rect x="295" y="9" width="90" height="108" fill="none" stroke="#578dff" stroke-width="3"/>
+		<line x1="295" y1="37" x2="385" y2="37" stroke="#578dff" stroke-width="1.5"/>
+	</g>
+	<text x="320" y="29.3" fill="#131114" font-family="Arial Black" font-size="13">TYPE</text>
+	<text x="303" y="53.2" fill="#3e3c42" font-family="Arial" font-size="14">name</text>
+	<line x1="303" y1="56" x2="341" y2="56" stroke="#3e3c42" stroke-width="1.2"/>
+	<text x="303" y="71.2" fill="#3e3c42" font-family="Arial" font-size="14">created_at</text>
+	<text x="303" y="89.2" fill="#3e3c42" font-family="Arial" font-size="14">updated_at</text>
+	<text x="303" y="107.2" fill="#3e3c42" font-family="Arial" font-size="14">status</text>
+</g>
+
+<!-- Entity SPECIES -->
+<g id="entity-SPECIES">
+	<g id="frame-SPECIES">
+		<rect x="448" y="117" width="90" height="28" fill="#97b8ff" stroke="#97b8ff" stroke-width="0"/>
+		<rect x="448" y="145.0" width="90" height="80" fill="#c0d4ff" stroke="#c0d4ff" stroke-width="0"/>
+		<rect x="448" y="117" width="90" height="108" fill="none" stroke="#578dff" stroke-width="3"/>
+		<line x1="448" y1="145" x2="538" y2="145" stroke="#578dff" stroke-width="1.5"/>
+	</g>
+	<text x="461" y="137.3" fill="#131114" font-family="Arial Black" font-size="13">SPECIES</text>
+	<text x="456" y="161.2" fill="#3e3c42" font-family="Arial" font-size="14">name</text>
+	<line x1="456" y1="164" x2="494" y2="164" stroke="#3e3c42" stroke-width="1.2"/>
+	<text x="456" y="179.2" fill="#3e3c42" font-family="Arial" font-size="14">created_at</text>
+	<text x="456" y="197.2" fill="#3e3c42" font-family="Arial" font-size="14">updated_at</text>
+	<text x="456" y="215.2" fill="#3e3c42" font-family="Arial" font-size="14">status</text>
+</g>
+
+<!-- Entity SIZE -->
+<g id="entity-SIZE">
+	<g id="frame-SIZE">
+		<rect x="9" y="9" width="90" height="28" fill="#97b8ff" stroke="#97b8ff" stroke-width="0"/>
+		<rect x="9" y="37.0" width="90" height="80" fill="#c0d4ff" stroke="#c0d4ff" stroke-width="0"/>
+		<rect x="9" y="9" width="90" height="108" fill="none" stroke="#578dff" stroke-width="3"/>
+		<line x1="9" y1="37" x2="99" y2="37" stroke="#578dff" stroke-width="1.5"/>
+	</g>
+	<text x="37" y="29.3" fill="#131114" font-family="Arial Black" font-size="13">SIZE</text>
+	<text x="17" y="53.2" fill="#3e3c42" font-family="Arial" font-size="14">name</text>
+	<line x1="17" y1="56" x2="55" y2="56" stroke="#3e3c42" stroke-width="1.2"/>
+	<text x="17" y="71.2" fill="#3e3c42" font-family="Arial" font-size="14">created_at</text>
+	<text x="17" y="89.2" fill="#3e3c42" font-family="Arial" font-size="14">updated_at</text>
+	<text x="17" y="107.2" fill="#3e3c42" font-family="Arial" font-size="14">status</text>
+</g>
+</svg>

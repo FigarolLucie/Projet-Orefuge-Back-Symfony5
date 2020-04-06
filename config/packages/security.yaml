@@ -1,0 +1,87 @@
+security:
+    encoders:
+        Symfony\Component\Security\Core\User\User: bcrypt
+        App\Entity\User: bcrypt
+   
+
+    # https://symfony.com/doc/current/security.html#where-do-users-come-from-user-providers
+    providers:
+        # used to reload user from session & other features (e.g. switch_user)
+        app_user_provider:
+            entity:
+                class: App\Entity\User
+                property: email
+    firewalls:
+        dev:
+            pattern: ^/(_(profiler|wdt)|css|images|js)/
+            security: false
+                 
+        
+                
+        login:
+            pattern:  ^/api/login
+            stateless: true
+            anonymous: true
+            json_login:
+                check_path: /api/login_check
+                success_handler: lexik_jwt_authentication.handler.authentication_success
+                failure_handler: lexik_jwt_authentication.handler.authentication_failure
+            logout:
+                path: logout
+
+        api-user:
+            pattern: /api/oneuser
+            stateless: true
+            guard:
+                authenticators:
+                    - lexik_jwt_authentication.jwt_token_authenticator
+        api-shelter-add:
+            pattern: /api/shelters/add
+            stateless: true
+            guard:
+                authenticators:
+                    - lexik_jwt_authentication.jwt_token_authenticator
+        api-shelter-edit:
+            pattern: /api/shelters/{id}/edit
+            stateless: true
+            guard:
+                authenticators:
+                    - lexik_jwt_authentication.jwt_token_authenticator
+
+        api-shelter-animal-add:
+            pattern: /api/shelters/{id}/animals/add
+            stateless: true
+            guard:
+                authenticators:
+                    - lexik_jwt_authentication.jwt_token_authenticator
+        
+        api-shelter-animal-edit:
+            pattern: /api/shelters/{id}/animals/{id}/edit
+            stateless: true
+            guard:
+                authenticators:
+                    - lexik_jwt_authentication.jwt_token_authenticator
+
+        api-shelter-animal-delete:
+            pattern: /api/shelters/{id}/animals/{id}/delete
+            stateless: true
+            guard:
+                authenticators:
+                    - lexik_jwt_authentication.jwt_token_authenticator
+        admin:
+            pattern: ^/
+            anonymous: true
+            provider: app_user_provider
+            form_login:
+                login_path: login_back
+                check_path: login_back
+                default_target_path: admin
+                # username_parameter: login[_username]
+                # password_parameter: login[_password] 
+            logout:
+                path: /logout 
+
+    access_control:
+        - { path: ^/api, roles: IS_AUTHENTICATED_ANONYMOUSLY }
+        - { path: ^/admin, roles: ROLE_ADMIN }
+       # - { path: ^/api,       roles: IS_AUTHENTICATED_FULLY }   

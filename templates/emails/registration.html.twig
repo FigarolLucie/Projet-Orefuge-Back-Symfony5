@@ -1,0 +1,13 @@
+{# templates/emails/registration.html.twig #}
+<h3>Merci d'avoir créé votre compte sur ORefuge</h3>
+
+<p>Bonjour {{ user.username }}!</p>
+<br />
+<br />
+<p>Votre inscription sur ORefuge a bien été prise en compte !</p> 
+<p>Afin de finaliser la création de votre compte, merci de cliquer <a href="{{ url('api_validate_new_user',{user_id : user.id})}}">ici.</a></p>
+
+<p>Pour vous connecter, rendez-vous sur <a href="{{'http://orefuge.fr/'}}">notre site</a>, rubrique connexion.</p>
+{# <p>Pour vous connecter, rendez-vous sur <a href="{{'http://orefuge.fr/se-connecter'}}">notre site</a>, rubrique connexion.</p> #}
+
+<p>Merci et à très bientôt !</p>

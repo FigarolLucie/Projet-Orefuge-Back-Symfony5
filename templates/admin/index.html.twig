@@ -1,0 +1,74 @@
+{% extends 'base.html.twig' %}
+
+{% block title %}Les refuges {% endblock %}
+
+{% block body %}
+
+
+
+<div class="container">
+  <div class="row">  
+    <h1 class="title-home-admin text-center">Bienvenue sur l'Administration de O'Refuge </h1>    
+  </div>
+</div>
+
+<h2 class="title-table ml-5"><i class="fas fa-paw"></i> Liste de refuges <i class="fas fa-paw"></i></h2>
+<div class="container-fluid container-table"> 
+
+    <table class="table table-bordered">
+      <thead>
+        <tr>
+          <th scope="col">Identifiant </th>
+          <th scope="col">Nom du refuge</th>
+          <th scope="col">N° SIRET</th>
+          <th scope="col">Etat</th>
+          <th scope="col">Changer l'état</th>
+          <th scope="col">Voir les animaux du refuge</th>
+          <th scope="col">Editer</th>
+          <th scope="col">Supprimer</th>
+  
+        </tr>
+      </thead>
+      <tbody>
+        {% for shelter in shelters %}
+
+          {% if shelter.status == 0 %}
+          <tr class="table-warning">
+          {% else %}
+          <tr class="table-success">
+          {% endif %}   
+                 
+          <th >{{shelter.id}}</th>
+          <td>{{shelter.name}}</td>         
+          <td>{{shelter.siretNumber}}</td>         
+          <td>
+            {% if shelter.status == 0 %}
+              En attente de modération
+          </td>
+          <td><a href="{{ path('admin_edit_shelter_status',{id : shelter.id})}}">Mettre en ligne</a> </td>
+            {% else %}
+            En ligne
+          </td>
+          <td><a href="{{ path('admin_edit_shelter_status',{id : shelter.id})}}">Mettre hors ligne</a> </td>
+            {% endif %}  
+          <td><a href="{{ path('admin_shelter_animals',{id : shelter.id})}}">Voir la liste  <i class="fas fa-paw"></i></a></td>       
+          <td><a href="{{ path('admin_edit_shelter',{id : shelter.id})}}"><i class="far fa-edit edit"></i> Editer</a> </td>
+          <td>
+            <i class="fas fa-times cross"></i>
+             
+            <form method="post" action="{{ path('admin_delete_shelter', {'id': shelter.id}) }}"
+            onsubmit="return confirm('Are you sure you want to delete this item?');"
+            style="display: inline-block;">
+              <input type="hidden" name="_method" value="DELETE">
+              <button class="btn">Supprimer</button>
+            </form>
+          </td>
+        </tr>
+       {% endfor %}
+       
+      <tbody>
+      </table>
+
+  </div >
+
+  {% endblock  %}

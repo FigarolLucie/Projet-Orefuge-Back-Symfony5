@@ -1,0 +1,30 @@
+{% extends 'admin/security_admin/base_login.html.twig' %}
+
+{% block title %}Se connecter{% endblock %}
+
+{% block body %}
+<div class="wrapper fadeInDown">
+  <div id="formContent">
+    <!-- Tabs Titles -->
+
+    <!-- Icon -->
+    <div class="fadeIn first">
+      Se connecter
+      <i class="fas fa-user-lock"></i>
+    </div>
+    {% if error %}
+     <div>{{ error.messageKey|trans(error.messageData, 'security') }}</div>
+    {% endif %}
+    <!-- Login Form -->
+    <form action="{{ path('login_back') }}" method="POST">
+      <input type="text" id="username" class="fadeIn second" name="_username" placeholder="Email">
+      <input type="text" id="password" class="fadeIn third" name="_password" placeholder="Mot de passe">
+      <input type="submit" class="fadeIn fourth" value="Log In">
+      <!--input type="hidden" name="_target_path" value="admin"/-->
+    </form>
+
+    
+
+  </div>
+</div>
+{% endblock %}

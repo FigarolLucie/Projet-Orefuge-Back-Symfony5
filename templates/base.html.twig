@@ -1,0 +1,56 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+  <meta charset="UTF-8">
+  <title>{% block title %}Welcome!{% endblock %}</title>
+  
+ 
+  <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css" integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous">
+  <script src="https://kit.fontawesome.com/a51b03dbf3.js" crossorigin="anonymous"></script>
+   
+   <link rel="stylesheet" href="{{asset('css/back/style.css')}}">
+   <link href="https://fonts.googleapis.com/css?family=Poppins|Roboto+Condensed&display=swap" rel="stylesheet">
+  {% block stylesheets %}{% endblock %}
+</head>
+<header class="container-fluid header ">
+  <nav class="navbar navbar-expand-lg navbar-light ">
+    <img src="{{asset('images/back-office/orefuge.png')}}" alt="logo-orefuge" class="logo-back">
+    <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarText" aria-controls="navbarText" aria-expanded="false" aria-label="Toggle navigation">
+      <span class="navbar-toggler-icon"></span>
+    </button>
+    <div class="collapse navbar-collapse" id="navbarText">
+      <ul class="navbar-nav mr-auto">
+        
+      </ul>
+      <span class="">
+        <a class="nav-link text-white align-self-center " href="{{ path('admin')}}">Accueil</a>
+      </span>
+      <span class="">
+        <a class="nav-link text-white align-self-center " href="{{ path('admin_list_characteristic')}}">Gestion des Caractéristiques</a>
+      </span>
+      <span class="">
+          <a class="nav-link text-white align-self-center " href="{{ path('admin_animals_add')}}">Ajouter un animal</a>
+        </span>
+        <span class="">
+            <a class="nav-link text-white align-self-center " href="{{ path('admin_shelter_add')}}">Ajouter un refuge</a>
+          </span>
+      {# <span class="">
+          <a class="nav-link text-white align-self-center " href="{{ path('admin_list_animals')}}">Liste animaux Caro</a>
+        </span> #}
+      <span class="">
+        <a class="nav-link text-white align-self-center " href="{{ path('logout')}}">Déconnexion</a>
+      </span>
+      <span class="">
+        <a class="nav-link text-white" href="#"><i class="fas fa-user"></i> {{app.user.username}}</a>
+      </span>
+    </div>
+  </nav>
+</header>
+
+<body>
+  {% block body %}{% endblock %}
+  {% block javascripts %}{% endblock %}
+</body>
+
+</html>

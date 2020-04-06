@@ -1,0 +1,35 @@
+{% extends 'base.html.twig' %}
+
+{% block title %}Les refuges {% endblock %}
+
+{% block body %}
+
+
+
+<div class="container">
+  <div class="row">  
+    <h1 class="title-home-admin text-center">Bienvenue sur l'Administration de O'Refuge </h1>    
+  </div>
+</div>
+
+<h2 class="title-table ml-5"><i class="fas fa-paw"></i>{{ animal.name}} <b>  </b></h2>
+
+
+Nom : {{ animal.name}} <br>
+Espèce : {{ animal.species.name}}<br>
+Date de naissance : {{animal.birthdate|date("d/m/Y")}}<br>
+Date d'arrivée au refuge : {{animal.arrivalDate|date("d/m/Y")}}<br>
+Genre : {{animal.gender}}<br>
+Ok avec les chiens : {{animal.dogFriendly}}<br>
+Ok avec les chats : {{animal.catFriendly}}<br>
+Ok avec les enfants : {{animal.childFriendly}}<br>
+Description : {{ animal.description}}<br>
+Informations supplémentaires : {{ animal.additionalInformation}}<br>
+Lien photo : {{ animal.picture1}}<br>
+
+<a href="{{ path('admin_shelter_animals',{id:animal.shelter.id}) }}">Retour au refuge</a>
+
+
+
+
+  {% endblock  %}
