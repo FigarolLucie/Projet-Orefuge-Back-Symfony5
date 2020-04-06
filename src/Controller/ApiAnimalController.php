@@ -51,7 +51,6 @@ class ApiAnimalController extends AbstractController
 
     if ($animal === null || $animal === []) {
       $errors[] = 'Animal not found';
-      //return new JsonResponse(['error' => 'Animal not found.'], 404);
     }
     if (count($errors) > 0) {
       return new JsonResponse(['error' => $errors], 404);
@@ -70,8 +69,13 @@ class ApiAnimalController extends AbstractController
     // list of adopted animals limited to 15 
     $listAdoptedAnimals = $animalRepository->findBy(["status" => 0], null, 15, 0);
 
-    if ($listAdoptedAnimals === null) {
-      return new JsonResponse(['error' => 'Adopted Animals not found.'], 404);
+    $errors = [];
+
+    if ($listAdoptedAnimals === null ) {
+      $errors[] = 'Adopted Animals not found.';
+    }
+    if (count($errors) > 0) {
+      return new JsonResponse(['error' => $errors], 404);
     }
 
     return $this->json($listAdoptedAnimals, Response::HTTP_OK, [], ['groups' => 'listAnimals']);
@@ -88,6 +92,14 @@ class ApiAnimalController extends AbstractController
 
     if ($listEmergencyAnimals === null) {
       return new JsonResponse(['error' => 'List of emergency Animals not found.'], 404);
+    }
+    $errors = [];
+
+    if ($listEmergencyAnimals === null ) {
+      $errors[] = 'List of emergency Animals not found.';
+    }
+    if (count($errors) > 0) {
+      return new JsonResponse(['error' => $errors], 404);
     }
 
     return $this->json($listEmergencyAnimals, Response::HTTP_OK, [], ['groups' => 'listAnimals']);
@@ -107,13 +119,20 @@ class ApiAnimalController extends AbstractController
     $species = $speciesRepository->find($request->get('species'));
     $tag = $tagRepository->find($request->get('tag'));
 
+    $errors = [];
 
-    if ($shelter === null) {
-      return new JsonResponse(['error' => 'Shelter not found.'], 404);
-    } else if ($species == null) {
-      return new JsonResponse(['error' => 'Species not found.'], 404);
-    } else if ($tag == null) {
-      return new JsonResponse(['error' => 'Tag not found.'], 404);
+    if ($shelter === null ) {
+      $errors[] = 'Shelter not found.';
+    }
+    if ($species === null ) {
+      $errors[] = 'Species not found.';
+    }
+    if ($tag === null ) {
+      $errors[] = 'Tag not found.';
+    }
+
+    if (count($errors) > 0) {
+      return new JsonResponse(['error' => $errors], 404);
     }
 
     $animal = new Animal();
@@ -168,18 +187,24 @@ class ApiAnimalController extends AbstractController
     $tag = $tagRepository->find($request->get('tag'));
     $animal = $animalRepository->find($animal_id);
 
-    //$error = [];
-    if ($shelter === null) {
-      return new JsonResponse(['error' => 'Shelter not found.'], 404);
-    } else if ($species == null) {
-      return new JsonResponse(['error' => 'Species not found.'], 404);
-    } else if ($tag == null) {
-      return new JsonResponse(['error' => 'Tag not found.'], 404);
-    } else if ($animal == null) {
-      return new JsonResponse(['error' => 'Animal not found.'], 404);
+    $errors = [];
+
+    if ($shelter === null ) {
+      $errors[] = 'Shelter not found.';
+    }
+    if ($species === null ) {
+      $errors[] = 'Species not found.';
+    }
+    if ($tag === null ) {
+      $errors[] = 'Tag not found.';
+    }
+    if ($animal === null ) {
+      $errors[] = 'Animal not found.';
     }
 
-
+    if (count($errors) > 0) {
+      return new JsonResponse(['error' => $errors], 404);
+    }
 
     $animal->setName($request->get('name'));
     $animal->setDescription($request->get('description'));
@@ -221,11 +246,18 @@ class ApiAnimalController extends AbstractController
    */
   public function deleteAnimalFollowingAdoption(Request $request, SerializerInterface $serializer, ValidatorInterface $validator, Shelter $shelter = null, Animal $animal = null)
   {
-    if ($shelter === null) {
-      return new JsonResponse(['error' => 'Shelter not found.'], 404);
-      if ($animal === null) {
-        return new JsonResponse(['error' => 'Animal not found.'], 404);
-      }
+    $errors = [];
+
+    if ($shelter === null ) {
+      $errors[] = 'Shelter not found.';
+    }
+    if ($animal === null ) {
+      $errors[] = 'Animal not found.';
+    }
+
+    if (count($errors) > 0) {
+      return new JsonResponse(['error' => $errors], 404);
+    }
 
       $JSONAnimal = $request->getContent();
 
@@ -255,34 +287,34 @@ class ApiAnimalController extends AbstractController
       $em->flush();
       return $this->redirectToRoute('api_list_animals', [], Response::HTTP_CREATED);
     }
-  }
+  
 
   /**
-   * Suppression en BDD d'un animal,rattaché à un refuge = passage de son status à 2 car il n'est plus à l'adoption
+   * Change the status of an animal with given id, change the status to 2 because he's no more to adopt for different reasons
    *    
    * @Route("/api/shelters/{shelter_id<\d+>}/animals/{animal_id<\d+>}/other-delete", name="api_other_delete_animal", methods={"POST"})
    * 
    */
   public function deleteAnimalFollowingOther(Request $request, SerializerInterface $serializer, ValidatorInterface $validator, Shelter $shelter, Animal $animal)
   {
-    // vérifier que l'id du shelter existe bien en BDD       
-    if ($shelter === null) {
-      return new JsonResponse(['error' => 'Shelter not found.'], 404);
+    $errors = [];
+
+    if ($shelter === null ) {
+      $errors[] = 'Shelter not found.';
+    }
+    if ($animal === null ) {
+      $errors[] = 'Animal not found.';
     }
 
-    // vérifier que l'id de l'animal existe bien en BDD 
-    if ($animal === null) {
-      return new JsonResponse(['error' => 'Animal not found.'], 404);
+    if (count($errors) > 0) {
+      return new JsonResponse(['error' => $errors], 404);
     }
 
     $JSONAnimal = $request->getContent();
 
     $animal = $serializer->deserialize($JSONAnimal, Animal::class, 'json');
-
-    // on passe le status de l'animal à 2 car il n'est pas adopté (status 0) et n'est plus à l'adoption (status 1)
     $animal->setStatus(2);
 
-    // Validation de l'entité ?
     $errors = $validator->validate($animal);
 
     if (count($errors) !== 0) {
