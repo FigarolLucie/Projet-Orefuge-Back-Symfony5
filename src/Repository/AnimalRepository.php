@@ -34,16 +34,9 @@ class AnimalRepository extends ServiceEntityRepository
              
          return $query->getResult();
      }
-
+    // Find list of emergency animals with a status =1
     public function findAllAnimalsByEmergencyTag()
     {
-        // SQL request
-        // SELECT * FROM `animal_tag`, `animal`, `tag` 
-        // WHERE `animal_tag`.`animal_id` = `animal`.`id` 
-        // AND `animal_tag`.`tag_id` = `tag`.`id`
-        // AND `tag`.`name` = "Urgent"
-
-        // Corresponding DQL request
         $query = $this->getEntityManager()
             ->createQuery(
             "SELECT animal FROM App\Entity\Animal AS animal 
