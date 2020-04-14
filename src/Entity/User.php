@@ -137,6 +137,7 @@ class User implements UserInterface
         // guarantee every user at least has ROLE_USER
 
         // ROLE en carton : Quick&Dirty
+        // TODO : apres fin de projet voir pour gerer ce probleme
         $roles[] = 'ROLE_ADMIN';
 
         return array_unique($roles);
