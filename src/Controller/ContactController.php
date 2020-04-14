@@ -26,7 +26,6 @@ class ContactController extends AbstractController
         $JSONContact = $request->getContent();
         $contact = $serializer->deserialize($JSONContact, Contact::class, 'json');
         
-        // Validation de l'entité ?
         $errors = $validator->validate($contact);
 
         if (count($errors) !== 0) {

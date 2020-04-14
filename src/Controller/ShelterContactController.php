@@ -15,78 +15,68 @@ use Symfony\Bundle\FrameworkBundle\Controller\AbstractController;
 
 class ShelterContactController extends AbstractController
 {
-    /**
-     * Genère un nouveau shelter contact à la soumission du formulaire en front
-     * 
-     * @Route("/api/shelter-contact", name="api_shelter_contact", methods={"POST"})
-     * 
-     */
-    public function newShelterContact(Request $request, SerializerInterface $serializer, \Swift_Mailer $mailer, ValidatorInterface $validator, ShelterRepository $shelterRepository)
-    {
-        $shelterContact = new ShelterContact();
+  /**
+   * Return a shelter contact when the form is sumbit in front
+   * 
+   * @Route("/api/shelter-contact", name="api_shelter_contact", methods={"POST"})
+   * 
+   */
+  public function newShelterContact(Request $request, SerializerInterface $serializer, \Swift_Mailer $mailer, ValidatorInterface $validator, ShelterRepository $shelterRepository)
+  {
+    $shelterContact = new ShelterContact();
 
-        $JSONShelterContact = $request->getContent();
-        $shelterContact = $serializer->deserialize($JSONShelterContact, ShelterContact::class, 'json');
-        
-        // Validation de l'entité ?
-        $errors = $validator->validate($shelterContact);
+    $JSONShelterContact = $request->getContent();
+    $shelterContact = $serializer->deserialize($JSONShelterContact, ShelterContact::class, 'json');
 
-        if (count($errors) !== 0) {
-            $jsonErrors = [];
+    $errors = $validator->validate($shelterContact);
 
-            foreach ($errors as $error) {
-            $jsonErrors[] = [
-                'field' => $error->getPropertyPath(),
-                'message' => $error->getMessage(),
-            ];
-            }
-            
-            return $this->json($jsonErrors, Response::HTTP_UNPROCESSABLE_ENTITY);
-        }
+    if (count($errors) !== 0) {
+      $jsonErrors = [];
 
-        // Message flash 
-        $this->addFlash('message', 'Nouveau contact de refuge généré'); 
+      foreach ($errors as $error) {
+        $jsonErrors[] = [
+          'field' => $error->getPropertyPath(),
+          'message' => $error->getMessage(),
+        ];
+      }
 
-        //A la création du nouveau contact, on veut envoyer le mail
-        // on appelle donc la methode asssociée
-        
-        $response = $this->sendShelterContactInformationEmail($shelterContact, $mailer, $shelterRepository);
-    
-        return $response;
-        
+      return $this->json($jsonErrors, Response::HTTP_UNPROCESSABLE_ENTITY);
     }
 
-    /**
-    * Envoie par mail sur la boite du refuge selectionné le contenu du formulaire rempli en front par le visiteur
-    * et cc : le visiteur
-    */
+    // Message flash 
+    $this->addFlash('message', 'Nouveau contact de refuge généré');
 
-    public function sendShelterContactInformationEmail($shelterContact, $mailer, $shelterRepository)
-    {     
-        // Récupération du shelter via ShelterRepository
-        $shelter = $shelterRepository->find($shelterContact->getShelterId());
-        // dd($shelter);
+    //A la création du nouveau contact, on veut envoyer le mail
+    // on appelle donc la methode asssociée        
+    $response = $this->sendShelterContactInformationEmail($shelterContact, $mailer, $shelterRepository);
 
-        $message = (new \Swift_Message('Nouveau message à l\'attention de votre refuge'))
-            ->setFrom($shelterContact->getEmail())            
-            ->setTo([$shelter->getEmail(), $shelterContact->getEmail() => $shelterContact->getFirstname().' ' .$shelterContact->getLastname()])
-            ->setBody(
-            $this->renderView(              
-                'emails/shelterContact.html.twig',
-                ['shelterContact' => $shelterContact]
-            ),
-            'text/html'
-        );
-        $mailer->send($message);
+    return $response;
+  }
 
-        // Message flash 
-        $this->addFlash('message', 'Nouveau message transmis au shelter et au visteur.'); 
+  /**
+   * Send by email the form et copy to visitor
+   * 
+   */
 
-        // $response = $this->sendContactInformationEmail($contact, $mailer);
-    
-        // return $response;    
-        return new JsonResponse(['success' => 'New Contact message send with success to the shelter and the visitor.'], 200);
-         
-    }
+  public function sendShelterContactInformationEmail($shelterContact, $mailer, $shelterRepository)
+  {
+    $shelter = $shelterRepository->find($shelterContact->getShelterId());
 
+    $message = (new \Swift_Message('Nouveau message à l\'attention de votre refuge'))
+      ->setFrom($shelterContact->getEmail())
+      ->setTo([$shelter->getEmail(), $shelterContact->getEmail() => $shelterContact->getFirstname() . ' ' . $shelterContact->getLastname()])
+      ->setBody(
+        $this->renderView(
+          'emails/shelterContact.html.twig',
+          ['shelterContact' => $shelterContact]
+        ),
+        'text/html'
+      );
+    $mailer->send($message);
+
+    $this->addFlash('message', 'Nouveau message transmis au shelter et au visteur.');
+
+    // return $response;    
+    return new JsonResponse(['success' => 'New Contact message send with success to the shelter and the visitor.'], 200);
+  }
 }
