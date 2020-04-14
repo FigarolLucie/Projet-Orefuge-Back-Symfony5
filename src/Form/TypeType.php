@@ -16,12 +16,7 @@ class TypeType extends AbstractType
         ->add('name',TextType::class, [
           'label' => 'Nom du Type'
       ] )
-            //->add('createdAt')
-            //->add('updatedAt')
-            //->add('status')
-            ->add('size')
-            //->add('categories')
-        ;
+            ->add('size');
     }
 
     public function configureOptions(OptionsResolver $resolver)

@@ -15,12 +15,7 @@ class TagType extends AbstractType
         $builder
         ->add('name',TextType::class, [
           'label' => 'Nom du Tag'
-      ] )
-            //->add('createdAt')
-           // ->add('updatedAt')
-            //->add('status')
-           // ->add('animals')
-        ;
+      ] );
     }
 
     public function configureOptions(OptionsResolver $resolver)

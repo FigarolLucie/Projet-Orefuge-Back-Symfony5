@@ -45,13 +45,6 @@ class AnimalType extends AbstractType
             ->add('additionalInformation',TextareaType::class, [
               'label' => 'Informations complémentaires'])
             ->add('picture1')
-            //->add('picture2')
-            //->add('picture3')
-            //->add('picture4')
-            //->add('picture5')
-            //->add('createdAt')
-            //->add('updatedAt')
-            //->add('status')
             ->add('shelter',EntityType::class, [
               'class' => Shelter::class,
               'choice_label' => 'name',

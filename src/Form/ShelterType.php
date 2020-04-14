@@ -15,7 +15,7 @@ class ShelterType extends AbstractType
         $builder
            ->add('name',TextType::class, [
             'label' => 'Nom du refuge'
-        ] ) //ok
+        ] ) 
             ->add('description',TextType::class, [
               'label' => 'Description'
           ])
@@ -27,25 +27,25 @@ class ShelterType extends AbstractType
           ])
             ->add('street_name',TextType::class, [
               'label' => 'Nom de la rue'
-          ])//ok
+          ])
             ->add('street_number',TextType::class, [
               'label' => 'Numéro de la rue'
-          ])//ok
+          ])
             ->add('zipcode',TextType::class, [
               'label' => 'Code Postale'
-          ])//ok
+          ])
             ->add('city',TextType::class, [
               'label' => 'Ville'
-          ])//ok
+          ])
             ->add('country',TextType::class, [
               'label' => 'Pays'
-          ])//ok
+          ])
             ->add('email',TextType::class, [
               'label' => 'Email'
           ])
             ->add('firstname',TextType::class, [
               'label' => 'Prénom'
-          ])//ok
+          ])
             ->add('lastname',TextType::class, [
               'label' => 'Nom '
           ])
@@ -66,28 +66,14 @@ class ShelterType extends AbstractType
           ])
             ->add('picture1',TextType::class, [
               'label' => 'Lien de l\'image'
-          ])//ok
-            //->add('picture2')//ok
-            //->add('picture3')//ok
-            //->add('picture4')//ok
+          ])
             ->add('adoption_conditions',TextType::class, [
               'label' => 'Conditions d\'adoption'
           ])
-            //->add('createdAt')
-            //->add('updatedAt')
-            //->add('status')
             ->add('siretNumber',TextType::class, [
               'label' => 'N° SIRET'
-          ])//ok
-            ->add('department')
-
-            // ->add('genres', EntityType::class, [
-            //     'class' => Genre::class,
-            //     'choice_label' => 'name',
-            //     'multiple' => true,
-            //     'expanded' => true,
-            // ])
-        ;
+          ])
+            ->add('department');
     }
 
     public function configureOptions(OptionsResolver $resolver)

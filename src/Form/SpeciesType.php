@@ -16,9 +16,6 @@ class SpeciesType extends AbstractType
         ->add('name',TextType::class, [
           'label' => 'Nom de l\'espèce'
       ] )
-            //->add('createdAt')
-            //->add('updatedAt')
-            //->add('status')
             ->add('type')
         ;
     }

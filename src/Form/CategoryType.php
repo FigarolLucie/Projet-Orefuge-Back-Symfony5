@@ -15,12 +15,7 @@ class CategoryType extends AbstractType
         $builder
         ->add('name',TextType::class, [
           'label' => 'Ajout catégorie'
-      ] )
-           // ->add('createdAt')
-           // ->add('updatedAt')
-            //->add('status')
-            //->add('types')
-        ;
+      ] );
     }
 
     public function configureOptions(OptionsResolver $resolver)

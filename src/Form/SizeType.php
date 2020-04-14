@@ -15,11 +15,7 @@ class SizeType extends AbstractType
         $builder
         ->add('name',TextType::class, [
           'label' => 'Nom de la taille'
-      ] )
-            //->add('createdAt')
-            //->add('updatedAt')
-            //->add('status')
-        ;
+      ] );
     }
 
     public function configureOptions(OptionsResolver $resolver)
