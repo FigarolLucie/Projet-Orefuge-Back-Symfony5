@@ -1,35 +1,55 @@
 {% extends 'base.html.twig' %}
 
-{% block title %}Les refuges {% endblock %}
+{% block title %}Détails animal : {{ animal.name}} {% endblock %}
 
 {% block body %}
 
 
 
 <div class="container">
-  <div class="row">  
-    <h1 class="title-home-admin text-center">Bienvenue sur l'Administration de O'Refuge </h1>    
+  <div class="row">
+    <h1 class="title-home-admin text-center">Bienvenue sur l'Administration de O'Refuge </h1>
   </div>
+
+
+  <h2 class="title-table ml-5"><i class="fas fa-paw"></i> {{ animal.name}} <b> </b></h2>
+
+
+  <p class="detail"><span class="detail__animal">Nom : </span> {{ animal.name}}</p> 
+  <p class="detail"><span class="detail__animal">Espèce :</span> {{ animal.species.name}}</p>
+  <p class="detail"><span class="detail__animal">Date de naissance :</span> {{animal.birthdate|date("d/m/Y")}} </p>
+  <p class="detail"><span class="detail__animal">Date d'arrivée au refuge :</span> {{animal.arrivalDate|date("d/m/Y")}} </p>
+  <p class="detail"><span class="detail__animal">Genre :</span> {{animal.gender}} </p>
+  <p class="detail"><span class="detail__animal">S'entend avec les chiens :</span> 
+    {% if animal.dogFriendly == 1  %}
+    Oui 
+    {% else %}
+    Non
+    {% endif %}
+  </p>
+  <p class="detail"><span class="detail__animal">S'entend avec les chats : </span> 
+    {% if animal.catFriendly == 1  %}
+    Oui 
+    {% else %}
+    Non
+    {% endif %}
+  </p>
+  <p class="detail"><span class="detail__animal">S'entend avec les enfants :</span> 
+    {% if animal.childFriendly == 1  %}
+    Oui 
+    {% else %}
+    Non
+    {% endif %}
+  </p>
+  <p class="detail"><span class="detail__animal">Description : </span>{{ animal.description}} </p>
+  <p class="detail"><span class="detail__animal">Informations supplémentaires :</span> {{ animal.additionalInformation}} </p>
+  
+
+  <a href="{{ path('admin_shelter_animals',{id:animal.shelter.id}) }}" class="btn btn-info mb-5">Retour au refuge</a>
+
 </div>
 
-<h2 class="title-table ml-5"><i class="fas fa-paw"></i>{{ animal.name}} <b>  </b></h2>
-
-
-Nom : {{ animal.name}} <br>
-Espèce : {{ animal.species.name}}<br>
-Date de naissance : {{animal.birthdate|date("d/m/Y")}}<br>
-Date d'arrivée au refuge : {{animal.arrivalDate|date("d/m/Y")}}<br>
-Genre : {{animal.gender}}<br>
-Ok avec les chiens : {{animal.dogFriendly}}<br>
-Ok avec les chats : {{animal.catFriendly}}<br>
-Ok avec les enfants : {{animal.childFriendly}}<br>
-Description : {{ animal.description}}<br>
-Informations supplémentaires : {{ animal.additionalInformation}}<br>
-Lien photo : {{ animal.picture1}}<br>
-
-<a href="{{ path('admin_shelter_animals',{id:animal.shelter.id}) }}">Retour au refuge</a>
 
 
 
-
-  {% endblock  %}
+{% endblock  %}

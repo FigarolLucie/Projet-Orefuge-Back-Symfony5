@@ -37,11 +37,14 @@ class AnimalType extends AbstractType
               'label' => 'Genre'
           ] )
             ->add('dogFriendly',CheckboxType::class, [
-              'label' => 'S\'entends bien avec les chiens'])
+              'label' => 'S\'entends bien avec les chiens',
+              'required' => false,])
             ->add('catFriendly',CheckboxType::class, [
-              'label' => 'S\'entends bien avec les chats'])
+              'label' => 'S\'entends bien avec les chats',
+              'required' => false,])
             ->add('childFriendly',CheckboxType::class, [
-              'label' => 'S\'entends bien avec les enfants'])
+              'label' => 'S\'entends bien avec les enfants',
+              'required' => false,])
             ->add('additionalInformation',TextareaType::class, [
               'label' => 'Informations complémentaires'])
             ->add('picture1')

@@ -119,6 +119,11 @@ form {
   margin-bottom: 3em;
 }
 
+.detail__animal
+{
+  font-weight:bold;
+}
+
 /**Login**/
 /* BASIC */
 
