@@ -4,14 +4,7 @@ lexik_jwt_authentication:
     pass_phrase: '%env(JWT_PASSPHRASE)%'
     token_ttl: 3600
 
-# # token encoding/decoding settings
-#     encoder:
-#         # token encoder/decoder service - default implementation based on the lcobucci/jwt library
-#         service:            lexik_jwt_authentication.encoder.lcobucci
-
-#         # encryption algorithm used by the encoder service
-#         signature_algorithm: RS256
-
+# Original Code
 #     # token extraction settings
 #     token_extractors:
 #         # look for a token as Authorization Header
