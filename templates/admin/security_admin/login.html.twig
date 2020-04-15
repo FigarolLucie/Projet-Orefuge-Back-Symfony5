@@ -3,28 +3,51 @@
 {% block title %}Se connecter{% endblock %}
 
 {% block body %}
+
+
+
 <div class="wrapper fadeInDown">
+  <div class="intro">
+   <div class="intro__img">
+      <img src="{{asset('images/back-office/orefuge.png')}}" alt="" class="intro__img__logo">
+   </div>
+  </div>
   <div id="formContent">
     <!-- Tabs Titles -->
 
     <!-- Icon -->
-    <div class="fadeIn first">
+    <div class="connexion fadeIn first ">
       Se connecter
       <i class="fas fa-user-lock"></i>
     </div>
     {% if error %}
-     <div>{{ error.messageKey|trans(error.messageData, 'security') }}</div>
+    <div class="alert alert-danger">Mauvais identifiants</div>
     {% endif %}
     <!-- Login Form -->
     <form action="{{ path('login_back') }}" method="POST">
       <input type="text" id="username" class="fadeIn second" name="_username" placeholder="Email">
       <input type="password" id="password" class="fadeIn third" name="_password" placeholder="Mot de passe">
-      <input type="submit" class="fadeIn fourth" value="Log In">
+      <input type="submit" class="fadeIn fourth" value="Se connecter">
       <!--input type="hidden" name="_target_path" value="admin"/-->
     </form>
 
-    
+
 
   </div>
+
+  <div class="content">
+    <div class="content__info">
+      <h4 class="content__info__title"> Indications</h4>
+      <p class="content__info__content">
+        <ul class="list_content">
+          <li class="list_content_items">Projet réalisé en <span class="items_span">1 mois</span> dans le cadre de notre projet de fin de formation (<a href="Oclock - Programme" class="items__link">Programme de la formation Oclock</a>)</li>
+          <li class="list_content_items">Réalisation du back-office en plus de la réalisation de l'API</li>
+          <li class="list_content_items">Utilisation de Symfony 5 en front et back pour le back-office (Twig) ainsi que de Bootstrap 4</li>
+         
+        </ul>
+      </p>
+    </div>
+  </div>
+
 </div>
 {% endblock %}
