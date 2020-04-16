@@ -57,3 +57,8 @@ Pour ne pas passer par Doctrine, vous pouvez directement importer dans votre bas
   - `db_user` : l'utilisateur de votre base de données,
   -  `db_password` : mot de passe de votre utilisateur,
   -  `db_name` : en accord avec le fichier `orefuge.sql`, il faut mettre ici `orefuge`.
+
+
+Token
+
+Pour lancer le server 
