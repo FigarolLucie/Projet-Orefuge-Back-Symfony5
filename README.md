@@ -20,6 +20,8 @@ Back et back-office du projet ORefuge : site destiné aux refuges animalier pour
 > - Back : réalisation d'une ***API*** pour evoyer les données au front. ***Back-office*** réalisé en full Synfony avec ***Twig et Bootstrap***.
 > - Mise en ligne du site sur ***AWS*** sur server dédié.
 > - Utilisation d'***Insomnia*** pour tester nos routes.
+> - Depuis le début de la formation nous travaillons sur une VM avec Ubuntu dessus.
+> - Utilisation des fixtures et de ***Faker***
 > 
 > ### Bundle utilisés
 > - Bundle ***Nelmio Cors*** pour gérer l'accès à l'API. 
@@ -27,8 +29,23 @@ Back et back-office du projet ORefuge : site destiné aux refuges animalier pour
 > - Bundle ***Twig*** dans nos templates côté back-office
 > - Bundle ***Swift mailer*** pour l'envoi d'email
 > - Bundle ***API Platform*** pour la gestion de clé étrangère.
+> 
 
 
 ## Installation du projet 
 
 Une fois le projet cloné en local, il faut ouvrir un terminal à la racine du dossier et  installer les dépendances avec  `composer install`
+
+Si vous souhaitez utiliser Doctrine pour installer la base de données, suivre le procédure ci -dessous, sinon passez diectement au paragraphe d'après.
+
+Insatallation avec Doctrine: 
+- faire un copier coler du fichier `.env` se trouvant à la racine du projet. Le renommer en `.env.local`.
+- Compléter la ligne suivante avec vos informations: `DATABASE_URL=mysql://db_user:db_password@127.0.0.1:3306/db_name?serverVersion=5.7`
+  - `db_user` : l'utilisateur de votre base de données,
+  -  `db_password` : mot de passe de votre utilisateur,
+  -  `db_name` : nom de la base que vous souhaitez créer.
+-  Ouvrir un terminal à la racine du projet
+-  Dans ce même termial
+   -  `bin/console doctrine:database:create` : pour créer la base de données
+   -  `bin/console doctrine:migration:migrate` : pour installer la structure de la base de données
+   -  `bin/console doctrine:fixtures:load` : pour générer de fausses données permettant de rendre plus "vivant" le site. Attention : ces données sont aléatoires, un chien pour être de l'espèce lapin par exemple. Les données  
