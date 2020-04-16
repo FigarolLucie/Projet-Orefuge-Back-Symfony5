@@ -31,4 +31,4 @@ Back et back-office du projet ORefuge : site destiné aux refuges animalier pour
 
 ## Installation du projet 
 
-Une fois le projet cloné en local, il faut ouvrir un terminal à la racine du dossier et  installer les dépendances avec <code> composer install</code>
+Une fois le projet cloné en local, il faut ouvrir un terminal à la racine du dossier et  installer les dépendances avec  `composer install`
