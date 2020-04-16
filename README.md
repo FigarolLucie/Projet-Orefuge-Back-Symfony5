@@ -38,7 +38,7 @@ Une fois le projet cloné en local, il faut ouvrir un terminal à la racine du d
 
 Si vous souhaitez utiliser Doctrine pour installer la base de données, suivre le procédure ci -dessous, sinon passez diectement au paragraphe d'après.
 
-Insatallation avec Doctrine: 
+Installation avec Doctrine: 
 - faire un copier coler du fichier `.env` se trouvant à la racine du projet. Le renommer en `.env.local`.
 - Compléter la ligne suivante avec vos informations: `DATABASE_URL=mysql://db_user:db_password@127.0.0.1:3306/db_name?serverVersion=5.7`
   - `db_user` : l'utilisateur de votre base de données,
@@ -48,4 +48,12 @@ Insatallation avec Doctrine:
 -  Dans ce même termial
    -  `bin/console doctrine:database:create` : pour créer la base de données
    -  `bin/console doctrine:migration:migrate` : pour installer la structure de la base de données
-   -  `bin/console doctrine:fixtures:load` : pour générer de fausses données permettant de rendre plus "vivant" le site. Attention : ces données sont aléatoires, un chien pour être de l'espèce lapin par exemple. Les données  
+   -  `bin/console doctrine:fixtures:load` : pour générer de fausses données permettant de rendre plus "vivant" le site. Attention : ces données sont aléatoires, un chien pour être de l'espèce lapin par exemple. 
+___
+OU 
+
+Pour ne pas passer par Doctrine, vous pouvez directement importer dans votre base de données le fichier `orefuge.sql` se trouvant à la racine du projet. Il vous faudra quand même créer le fichier `.env.local` :
+- Compléter la ligne suivante avec vos informations: `DATABASE_URL=mysql://db_user:db_password@127.0.0.1:3306/db_name?serverVersion=5.7`
+  - `db_user` : l'utilisateur de votre base de données,
+  -  `db_password` : mot de passe de votre utilisateur,
+  -  `db_name` : en accord avec le fichier `orefuge.sql`, il faut mettre ici `orefuge`.
