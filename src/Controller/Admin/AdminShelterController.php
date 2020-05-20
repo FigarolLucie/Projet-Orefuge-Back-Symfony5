@@ -11,16 +11,7 @@ use Symfony\Component\HttpFoundation\Request;
 
 class AdminShelterController extends AbstractController
 {
-  /**
-   * Home page for connexion
-   * @Route("/", name="home")
-   */
-  public function home()
-  {    
-    //return $this->render('admin/home.html.twig');
-    //return $this->render('admin/security_admin/login.html.twig');
-    return $this->redirectToRoute('login_back');
-  }
+  
 
   /**
    * Home page for Admin, list of shelters
@@ -28,7 +19,7 @@ class AdminShelterController extends AbstractController
    */
   public function allShelters(ShelterRepository $shelterRepository)
   {
-   
+
     $listShelters = $shelterRepository->findAll();
     return $this->render('admin/index.html.twig', [
       'shelters' => $listShelters,
@@ -38,16 +29,16 @@ class AdminShelterController extends AbstractController
    * Edition of a shelter
    * @Route("admin/shelters/{id<\d+>}/edit", name="admin_edit_shelter", methods={"GET", "POST"})
    */
-  public function editShelter(Shelter $shelter , ShelterRepository $shelterRepository, Request $request)
+  public function editShelter(Shelter $shelter, ShelterRepository $shelterRepository, Request $request)
   {
-    
+
     $form = $this->createForm(ShelterType::class, $shelter);
     $form->handleRequest($request);
 
     if ($form->isSubmitted() && $form->isValid()) {
-        $this->getDoctrine()->getManager()->flush();
+      $this->getDoctrine()->getManager()->flush();
 
-        return $this->redirectToRoute('admin');
+      return $this->redirectToRoute('admin');
     }
 
 
@@ -62,25 +53,25 @@ class AdminShelterController extends AbstractController
    * Add an Shelter
    * @Route("admin/shelter/add", name="admin_shelter_add", methods={"GET","POST"})
    */
-  public function shelterAdd( ShelterRepository $shelterRepository, Request $request)
+  public function shelterAdd(ShelterRepository $shelterRepository, Request $request)
   {
     $shelter = new Shelter();
     $form = $this->createForm(ShelterType::class, $shelter);
     $form->handleRequest($request);
-    
-    
 
-    if ($form->isSubmitted() ) {
-        $shelter->setStatus(0);
-        $shelter->setCreatedAt(new \DateTime());
-        $shelter->setUpdatedAt(new \DateTime());
-        
-        $em = $this->getDoctrine()->getManager();
-        $em->persist($shelter);
-        $em->flush();
-        
 
-        return $this->redirectToRoute('admin');
+
+    if ($form->isSubmitted()) {
+      $shelter->setStatus(0);
+      $shelter->setCreatedAt(new \DateTime());
+      $shelter->setUpdatedAt(new \DateTime());
+
+      $em = $this->getDoctrine()->getManager();
+      $em->persist($shelter);
+      $em->flush();
+
+
+      return $this->redirectToRoute('admin');
     }
 
 
@@ -121,7 +112,7 @@ class AdminShelterController extends AbstractController
   public function deleteShelter($id, ShelterRepository $shelterRepository)
   {
 
-    $shelter = $shelterRepository->find($id);   
+    $shelter = $shelterRepository->find($id);
     $em = $this->getDoctrine()->getManager();
     $em->remove($shelter);
     $em->flush();

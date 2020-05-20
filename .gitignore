@@ -19,3 +19,9 @@
 /config/jwt/*.pem
 ###< lexik/jwt-authentication-bundle ###
 /doc-ORefuge
+###> symfony/webpack-encore-bundle ###
+/node_modules/
+/public/build/
+npm-debug.log
+yarn-error.log
+###< symfony/webpack-encore-bundle ###
