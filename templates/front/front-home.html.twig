@@ -5,28 +5,54 @@
 <div class="wrapper">
   <section class="header">
     <header class="navbar-menu ">
-        <nav class="   navbar-expand-lg navbar-light  navbar-color">
-            <a class="navbar-brand" href="#">O'Refuge</a>
-            <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
-              <span class="navbar-toggler-icon"></span>
-            </button>
-            <div class="collapse navbar-collapse" id="navbarNav">
-              <ul class="navbar-nav">
-                <li class=" active">
-                  <a class="" href="#">Accueil <span class="sr-only">(current)</span></a>
-                </li>
-                <li class="">
-                  <a class="" href="#">Ils ont été adoptés</a>
-                </li>
-                <li class="">
-                  <a class="" href="#">Les refuges</a>
-                </li>
-                <li class="">
-                  <a class=" disabled" href="#" tabindex="-1" aria-disabled="true">Disabled</a>
-                </li>
-              </ul>
-            </div>
-          </nav>
+      {# MENU MOBILE #}
+      <nav class="nav-menu-mobile">
+        <div class="icons">
+          <a class="" href="#">O'Refuge</a>
+          <i class="fa fa-bars " id="icon-menu" aria-hidden="true"></i>
+        </div>
+
+        <div id="nav__item__mobile">
+          <p class="cross-icon-menu">
+            <i class="fa fa-times" id="icon-cross" aria-hidden="true"></i>
+          </p>
+          <ul class="nav__list">
+            <li class=" ">
+              <a class="" href="#">Accueil </a>
+            </li>
+            <li class="">
+              <a class="" href="#">Ils ont été adoptés</a>
+            </li>
+            <li class="">
+              <a class="" href="#">Les refuges</a>
+            </li>
+            <li class="">
+              <a class=" " href="#">Disabled</a>
+            </li>
+          </ul>
+        </div>
+      </nav>
+      {# MENU DESKTOP #}
+      <nav class="nav-menu-desktop">
+        <div id="nav__item__desktop">
+          <a class="" href="#">O'Refuge</a>
+
+          <ul class="nav__list">
+            <li class=" ">
+              <a class="" href="#">Accueillll </a>
+            </li>
+            <li class="">
+              <a class="" href="#">Ils ont été adoptés</a>
+            </li>
+            <li class="">
+              <a class="" href="#">Les refuges</a>
+            </li>
+            <li class="">
+              <a class=" " href="#">Disabled</a>
+            </li>
+          </ul>
+        </div>
+      </nav>
 
     </header>
   </section>

@@ -1,3 +1,87 @@
+/* Breakpoint */
+$breakpoint-medium: 500px;
+$breakpoint-large: 800px;
+$breakpoint-extra-large: 1200px;
 
+/* Font */
+$font-size: 16px;
+$font-size-medium: 18px;
+$font-size-large: 20px;
 
+/* Padding */
 
+$padding-default: 1em;
+$padding-small: 0.5em;
+$padding-medium: 1.5em;
+$padding-large: 2.5em;
+
+/* Colors */
+
+$black: #000;
+$white: #fff;
+
+/* Links */
+a {
+  text-decoration: none;
+  color: black;
+}
+
+/********** Navbar **********/
+.navbar-menu-mobile {
+  position: relative;
+}
+.nav__list {
+  list-style-type: none;
+}
+
+#nav__item__mobile {
+  position: absolute;
+  position: fixed;
+  display: none;
+
+  top: 0;
+  right: 0;
+  bottom: 0;
+  left: 0;
+
+  z-index: 50;
+  background-color: pink;
+}
+
+.icons {
+  display: flex;
+  justify-content: space-between;
+  padding: $padding-default;
+}
+
+.cross-icon-menu {
+  display: flex;
+  justify-content: flex-end;
+  padding: $padding-default;
+}
+.nav-menu-desktop {
+  display: none;
+}
+
+@media (min-width: $breakpoint-large) {
+  .nav-menu-desktop {
+    display: block;
+  }
+
+  .nav-menu-mobile {
+    display: none;
+  }
+
+  #nav__item__desktop {
+    display: flex;
+    align-items: baseline;
+    padding: $padding-default;
+    .nav__list {
+      display: flex;
+
+      li {
+        padding: $padding-default;
+      }
+    }
+  }
+}
