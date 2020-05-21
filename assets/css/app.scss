@@ -7,6 +7,9 @@ $breakpoint-extra-large: 1200px;
 $font-size: 16px;
 $font-size-medium: 18px;
 $font-size-large: 20px;
+$font-size-big: 30px;
+$font-size-h1: 60px;
+$font-size-h2: 45px;
 
 /* Padding */
 
@@ -20,11 +23,17 @@ $padding-large: 2.5em;
 $black: #000;
 $white: #fff;
 
+$bg-text-color: $white;
+
 /* Links */
 a {
   text-decoration: none;
   color: black;
 }
+
+// *{
+//   box-sizing:content-box;
+// }
 
 /********** Navbar **********/
 .navbar-menu-mobile {
@@ -93,12 +102,118 @@ a {
   background-image: url("../../public/images/front/fond-mobile.png");
   height: 100vh;
   background-position: right;
+  background-repeat: no-repeat;
+  background-size: cover;
+  // display:flex;
+  // flex-wrap:wrap;
 }
 
+.navbar-menu {
+  width: 100vw;
+  //height:15%;
+}
+.info-header {
+  display: flex;
+  width: 90%;
+  //background-color:brown;
+  height: 500px;
+  align-items: center;
+  justify-content: center;
+  margin: auto;
+
+  a {
+    color: $bg-text-color;
+    border: 2px solid $bg-text-color;
+    border-radius: 5px;
+    padding: 0.5* $padding-small;
+    font-size: $font-size-medium;
+    text-align:center;
+    display:block;
+    width:50%;
+    margin:1em;
+  }
+
+  h2 {
+    color: $bg-text-color;
+    font-size: $font-size-h2;
+    text-align: center;
+  }
+
+  .container-info {
+    width: 70%;
+    margin: auto;
+
+    .link__info{
+     // border:1px solid white;
+      display:flex;
+    }
+  }
+}
+
+.down{
+  width:100%;
+  color:white;
+  display:flex;
+  align-items:flex-end;
+  justify-content: center;
+
+  position:absolute;
+  bottom:0;
+
+  i{
+    font-size: $font-size-big;
+    border-radius:1.5em;
+    border: solid 2px $bg-text-color;
+    padding:$padding-small;
+  }
+}
+/** Responsive Header **/
 @media (min-width: $breakpoint-large) {
   .header {
     background-image: url("../../public/images/front/Fond-orefuge.png");
     height: 100vh;
     background-position: center;
+    background-repeat: no-repeat;
+    background-size: cover;
+  }
+  .info-header {
+    width: 80%;   
+  
+    a {
+     
+      border: 2px solid $bg-text-color;
+      border-radius: 5px;
+      padding: 0.5* $padding-small;
+      font-size: $font-size-large;
+      text-align:center;
+      display:block;
+      width:25%;
+      margin:1.5em;
+    }
+  
+    h2 {
+      color: $bg-text-color;
+      font-size: $font-size-h1;
+      text-align: center;
+    }
+  
+    .container-info {
+      width: 70%;
+      margin: auto;
+  
+      .link__info{
+       // border:1px solid white;
+        display:flex;
+        justify-content: space-evenly;
+      }
+    }
   }
 }
+
+@media (min-width: $breakpoint-extra-large) {
+  .info-header {
+    width: 60%;  
+   
+    }
+  }
+
