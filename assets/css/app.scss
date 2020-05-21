@@ -63,6 +63,7 @@ a {
   display: none;
 }
 
+/** Responsive Menu **/
 @media (min-width: $breakpoint-large) {
   .nav-menu-desktop {
     display: block;
@@ -83,5 +84,21 @@ a {
         padding: $padding-default;
       }
     }
+  }
+}
+
+/** Header **/
+
+.header {
+  background-image: url("../../public/images/front/fond-mobile.png");
+  height: 100vh;
+  background-position: right;
+}
+
+@media (min-width: $breakpoint-large) {
+  .header {
+    background-image: url("../../public/images/front/Fond-orefuge.png");
+    height: 100vh;
+    background-position: center;
   }
 }
